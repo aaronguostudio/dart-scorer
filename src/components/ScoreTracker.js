@@ -1,15 +1,25 @@
-import React from 'react';
-import { InputNumber } from 'antd';
+import React, { useState } from 'react';
+import { Button, InputNumber } from 'antd';
 
-export default ({ label, value = 0, isDisabled }) => {
+export default ({ onAddScore }) => {
+  const [score, setScore] = useState(0);
+
   return (
-    <div style={{ display: 'flex', alignItems: 'baseline', margin: 16 }}>
-      <span style={{ marginRight: 8 }}>{label}:</span>
+    <div style={{ display: 'flex' }}>
       <InputNumber
         style={{ width: '100%' }}
-        value={value}
-        disabled={isDisabled}
+        value={score}
+        onChange={value => setScore(value)}
       />
+      <Button
+        type="primary"
+        onClick={() => {
+          onAddScore(score);
+          setScore(0);
+        }}
+      >
+        +
+      </Button>
     </div>
   );
 };
