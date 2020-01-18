@@ -1,4 +1,6 @@
-import app from 'firebase/app'
+import app from 'firebase/app';
+import 'firebase/auth'
+import 'firebase/firestore'
 
 const prodConfig = {
   apiKey: 'AIzaSyC8FnKDamb1jcXrXjVd4te74wb8_d55Rxs',
@@ -23,7 +25,13 @@ const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig
 class Firebase {
   constructor () {
     app.initializeApp(config)
+    this.auth = app.auth()
+    this.firestore = app.firestore()
   }
+
+  // openGame () {
+  //   return app.
+  // }
 }
 
-export default Firebase
+export default Firebase;
