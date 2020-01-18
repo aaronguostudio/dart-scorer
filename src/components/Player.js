@@ -1,13 +1,13 @@
 import { Avatar } from 'antd';
 import React from 'react';
 
-export default ({ player }) => {
+export default ({ player, score }) => {
   return (
     <div style={{ textAlign: 'center' }}>
       <Avatar style={{ backgroundColor: 'orange', fontSize: 24 }} size="large">
-        {player.name.charAt(0)}
+        {player && player.charAt(0)}
       </Avatar>
-      <span style={{ display: 'block', fontSize: 24 }}>{player.score}</span>
+      <span style={{ display: 'block', fontSize: 24 }}>{score || 0}</span>
     </div>
   );
 };

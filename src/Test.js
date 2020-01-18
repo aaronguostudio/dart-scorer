@@ -3,7 +3,7 @@ import  { FirebaseContext } from './firebase';
 const Test = () => (
   <FirebaseContext.Consumer>
     {firebase => {
-      console.log('>', firebase.firestore.collection('open_games').add({
+      console.log('>', firebase.firestore.collection('openGames').add({
         host: 'Aaron Guo'
       }).catch(err => {
         console.log('>err', err)
