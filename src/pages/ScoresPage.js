@@ -1,5 +1,5 @@
 import React from 'react';
-import Players from '../components/ScoreTracker';
+import Players from '../components/Players';
 
 export default () => {
   return (
