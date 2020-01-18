@@ -24,7 +24,31 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC8FnKDamb1jcXrXjVd4te74wb8_d55Rxs",
+        authDomain: "dartscore-c2276.firebaseapp.com",
+        databaseURL: "https://dartscore-c2276.firebaseio.com",
+        projectId: "dartscore-c2276",
+        storageBucket: "dartscore-c2276.appspot.com",
+        messagingSenderId: "468010043601",
+        appId: "1:468010043601:web:3fe809d2b5061267f41df0",
+        measurementId: "G-03M4LF2WSZ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <title>Dart Scorer</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
