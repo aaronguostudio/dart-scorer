@@ -2,10 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: grey;
+  background-color: black;
   height: 100vh;
 }
-
+.logo {
+  margin-top: 20px;
+}
+.username {
+  margin-top: 20px;
+  color: orangered;
+}
 .btn {
   margin-top: 20px;
   width: 70%;
